@@ -9,12 +9,9 @@ const ranges = player.querySelectorAll('.player__slider');
 
 //Functions
 
-function togglePlay() {
-    if (video.pauses) {
-        video.play();
-    } else {
-        video.pause();
-    }
+function togglePlay() { 
+    const method = video.paused ? 'play':'pause';
+    video[method]();
 }
 
 //Event listeners
